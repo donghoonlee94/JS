@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        // 정규표현식 객체 생성
+        // pattern 은 찾으려는 의지를 담음. 추출하고, 있는지 테스트하고, 치환하기 위한 정규 표현식.
+        // pattern.exec = 배열로 리턴 , pattern.test = boolean으로 리턴 (있으면 true, 없으면 false)
+
+        var pattern = /a/;
+
+        var pattern1 = new RegExp('a');
+
+        console.log(pattern.exec('abcde'));
+        
+        var pattern2 = /a./; //점은 문자 1개를 의미. 
+         console.log(pattern2.exec('abcde'));
+
+    </script>
+</body>
+</html>

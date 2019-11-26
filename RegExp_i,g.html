@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        // i 는 대소문자 구별없이 찾아줌.
+        // g 는 전체적으로 찾아줌. 글로벌
+        // ig는 대소문자 없이 글로벌
+        var xi = /a/;
+        console.log("AbcAbca".match(xi));
+
+        var oi = /a/i;
+        console.log("AbcAbca".match(oi));
+
+        var xg = /a/;
+        console.log("AaA".match(xg));
+
+        var og = /a/g;
+        console.log("AaAbbaAa".match(og));
+
+        var ig = /a/ig;
+        console.log("AaAabasdAa".match(ig));
+    </script>
+</body>
+</html>

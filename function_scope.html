@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vscope = 'global';
+        function fscope(){
+            var vscope = 'local';
+            vscope = 'local-global'
+            alert('함수안'+vscope);
+        }
+        fscope();
+        alert('함수밖'+vscope);
+
+        // 전역에 선언을 하고도 함수 안에서 var를 안 붙이면 함수 안의 변수가 전역이 됨.
+        // 다만, 함수 안에 var vscope = 'local'; 이 있는데 var가 없는 vscope = 'global'을 하면 함수 내에 var 함수만 global로 바뀌고 전역함수는 안 바뀜.
+    </script>    
+</body>
+</html>

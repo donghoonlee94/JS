@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numbers = [20, 10, 9,8,7,6,5,4,3,2,1];
+        function sortNumber(a,b){
+          // 위의 예제와 비교해서 a와 b의 순서를 바꾸면 정렬순서가 반대가 된다.
+          // a-b의 값이 양수이면 a,b의 자리를 바꿔야 한다는 의미 음수이면 a,b의 자리가 정렬된 상태라는 의미
+            return a-b;
+        }
+        console.log(numbers.sort(sortNumber)); // array, [20,10,9,8,7,6,5,4,3,2,1]    
+    </script>
+</body>
+</html>

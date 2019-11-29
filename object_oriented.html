@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+        // 객체지향 프로그래밍
+        //객체 언애 객체 생성, 객체 안에 함수도 생성 가능.
+        // this를 갖고 있는 함수의 객체 
+
+      var list = {
+        love : {"sohee":"SoheonLover", "soheon":"SoheeLover", "Yaekyung":"MyLove"},
+        love_alert : function() {
+          for(value in this.love){
+              console.log(value, this.love[value]);
+          }
+        }
+      }
+      list.love_alert();
+  </script>
+</body>
+</html>

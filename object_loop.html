@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <script>
+      // Object loop
+      // for (key in object) key = {'egoing':10} egoing = key
+
+      var love = {"sohee":"SoheonLover", "soheon":"SoheeLover", "Yaekyung":"MyLove"}
+      love["Gyeonri"] = "Solo";
+      love["so"+"so"] = "Soso";
+      for (value in love){
+          document.write("<li>key : " + value + ", value :" + love[value] + "</li>");
+      }
+
+    </script>
+  </ul>
+</body>
+</html>

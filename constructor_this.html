@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var funcThis = null; 
+        
+        function Func(){
+            funcThis = this;
+        }
+
+        var o1 = Func();
+
+        if(funcThis === window){
+            document.write('window <br />');
+        }
+        
+        var o2 = new Func();    
+         // 객체를 생성하는 생성자가 됨과 동시에, 함수를 한번 실행한다.
+        /* 
+
+        ex : 
+        Func{
+            funcThis = this;
+        }
+        */
+        // 비어있는 객체를 만들고, 비어있는 객체가 생성자안에서 this가 된다.
+            // 생성자 안에서 객체는 this가 된다.
+
+        if(funcThis === o2){
+            document.write('o2 <br />');
+        }
+    </script>
+</body>
+</html>   

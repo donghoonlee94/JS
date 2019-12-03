@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 실제로는 이렇게 사용하면 위험하기 때문에 사용하지 않음. 객체에 contain이 들어간다.
+        Object.prototype.contain = function(aa){
+            for(var name in this){
+                if(this[name] === aa){
+                    return true;
+                }
+            }
+            return false;            
+        }
+        var a = {name : "hoon" , local : "seoul"}
+        var b = ['hoon','kyung','hee']
+        console.log(a.contain('hoon'));
+        console.log(b.contain('kyung'));
+
+        // Property check Method 
+        for(var name in a){
+            if(a.hasOwnProperty(name)){
+                console.log(name);
+            }
+        }
+
+    </script>
+</body>
+</html>
